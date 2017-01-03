@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  alias_name: 
+  content: 
+  price: 
+  new_price: 
+
+two:
+  name: 
+  alias_name: 
+  content: 
+  price: 
+  new_price: 
