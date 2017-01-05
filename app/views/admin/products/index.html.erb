@@ -1,15 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Admin Products</h1>
-
-<table>
+<h1>Quản lý Sản Phẩm</h1>
+<table class="table table-default">
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Alias name</th>
-      <th>Content</th>
-      <th>Price</th>
-      <th>New price</th>
+    <tr class="admin-table-head">
+      <th>Tên Sản Phẩm</th>
+      <th colspan="" rowspan="" headers="" scope="">Hình Ảnh</th>
+      <th>Nội dung</th>
+      <th>Giá</th>
+      <th>Giá khuyến mại</th>
+      <th colspan="" rowspan="" headers="" scope="">Danh Mục</th>
+      <th colspan="" rowspan="" headers="" scope="">Nhãn</th> 
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -32,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Admin Product', new_admin_product_path %>
+<%= link_to 'Thêm sản phẩm ', new_admin_product_path %>

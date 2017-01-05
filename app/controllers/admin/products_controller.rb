@@ -1,5 +1,7 @@
 class Admin::ProductsController < ApplicationController
   before_action :set_admin_product, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :verify_authenticity_token
+  layout 'admin'
 
   # GET /admin/products
   # GET /admin/products.json
@@ -60,6 +62,15 @@ class Admin::ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def uploadImage
+    file = params[:file]
+    File.open(Rails.root.join('public', 'uploads', file.original_filename), 'wb') do |file|
+      file.write(params[:file].read)
+    end
+    render nothing: true
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

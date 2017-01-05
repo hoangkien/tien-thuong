@@ -1,29 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= content_for?(:title) ? yield(:title) : "GentelellaOnRails" %> </title>
+  <head>
+    <title>Shop</title>
+    <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-</head>
-
-<body class="nav-md">
-<div class="container body">
-  <% flash.each do |key, value| %>
-      <div align="center" id="flash" class="alert alert-<%= key %>"><%= value %></div>
-  <% end %>
-
-<%= render "admin/partials/sidenav" %>
-<%= render "admin/partials/topnav" %>
-
-<%= yield %>
-
-  <%= render "admin/partials/footer" %>
-  <%= javascript_include_tag 'footermanifest', 'data-turbolinks-track' => true %>
-
-</body>
+  <body>
+    <%= render partial: "admin/components/nav"%>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
 </html>

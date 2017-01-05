@@ -5,4 +5,5 @@ class ProductsController < ApplicationController
 
 	def detail
 	end
+  
 end
